@@ -40,6 +40,12 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "http://localhost:5000",
-    "devDependencies": {}
+    "proxy": {
+        "/.netlify/functions": {
+            "target": "http://localhost:9000",
+            "pathRewrite": {
+                "^/\\.netlify/functions": ""
+            }
+        }
+    }
 }

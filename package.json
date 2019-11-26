@@ -13,7 +13,12 @@
         "serverless-http": "^2.3.0"
     },
     "scripts": {
-        "start": "( yarn build)  && node index.js",
-        "build": "(cd client && yarn build)"
+        "start:app": "cd client && yarn start",
+        "start:server": "netlify-lambda serve functions",
+        "build:app": "yarn install && cd client && yarn install && yarn build",
+        "build:functions": "netlify-lambda build functions"
+    },
+    "devDependencies": {
+        "netlify-lambda": "^1.6.3"
     }
 }
