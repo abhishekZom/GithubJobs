@@ -15,7 +15,7 @@
     "scripts": {
         "start:app": "cd client && yarn start",
         "start:server": "netlify-lambda serve functions",
-        "build:app": "yarn install && cd client && yarn install && yarn build",
+        "build:app": " cd client && yarn install && yarn build",
         "build:functions": "netlify-lambda build functions"
     },
     "devDependencies": {
