@@ -16,7 +16,7 @@ export default function expressApp() {
         try {
             const response = await request(`https://jobs.github.com/positions.json?description=${req.query.description}`);
             res.send(response.body);
-        } catch(e) {
+        } catch (e) {
             console.log(e);
         }
     });
@@ -25,14 +25,14 @@ export default function expressApp() {
         try {
             const response = await request(`https://jobs.github.com/positions/${req.query.id}.json`);
             res.send(response.body);
-        } catch(e) {
+        } catch (e) {
             console.log(e);
         }
     });
 
     // Handles any requests that don't match the ones above
-    app.get('*', (req,res) =>{
-        res.sendFile(path.join(__dirname+'/client/build/index.html'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname + '/client/build/index.html'));
     });
 
     return app
