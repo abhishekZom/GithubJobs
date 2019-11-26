@@ -1,6 +1,6 @@
 [build]
   # This will be run the site build
-  command = "cd client && yarn build"
+  command = "yarn install && cd client && yarn install && yarn build"
   # This is the directory is publishing to netlify's CDN
   publish = "./client/build"
   # functions build directory
